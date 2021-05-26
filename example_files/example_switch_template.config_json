@@ -1,0 +1,14 @@
+{
+    "switch_schema":{
+        "type":"choc",
+        "pcbStabSupport":"False",
+        "ledSupport":"False",
+        "diodeMount":"tht"
+    },
+    "led_schema":{
+        "type":"led_single"
+    },
+    "control_schema":{
+        "type":"pro_micro"
+    }
+}
