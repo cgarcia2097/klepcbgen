@@ -9,7 +9,7 @@ This repo is a fork of the [original KLE PCB Generator by Jeroen Bowens](https:/
 
 ## State of the project
 
-The current state of the project is in alpha, and is currently trying to implement the features of the original KLE PCB Generator.
+The current state of the project is in alpha, and is currently trying to implement the features of the original KLE PCB Generator. Work is being done to better abstract sections of the original project.
 
 ## Dependecies
 
@@ -30,6 +30,7 @@ For the time being, these scripts are to be treated more as a plugin and less of
 
 - Automate the placement of the PCB file using the coordinate map and the config file
 
-## My current take on the current klepcbgen project
+## Credits
 
-It's hard not to be impressed at the level of work that went into the current klepcbgen project, since looking at the source files reminded be quite a bit of how a website is rendered. The templates themselves are KiCAD schematic and PCB files, rather than your typical HTML. However, the templates are hand-modified and the project itself is unable to tap into the user's existing KiCAD install (which contains the bulk of the libraries). Unless one can regex the whole KiCAD library into a series of Jinja templates, the project cannot be properly expanded to more switch types, or even lighting types. This severely limits the potential of this project.
+Jeroen Bowens @jeroen94704: [Link](https://github.com/jeroen94704)
+Charles Garcia @cgarcia2097:
