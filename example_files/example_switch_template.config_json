@@ -1,6 +1,6 @@
 {
     "switch_schema":{
-        "type":"choc",
+        "type":"mx",
         "pcbStabSupport":"False",
         "ledSupport":"False",
         "diodeMount":"tht"

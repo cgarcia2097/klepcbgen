@@ -131,6 +131,7 @@ def main(argv):
     # Load the board files
     board = pcbnew.LoadBoard(args.pcb_file)
 
+    # Place components on a per-key basis
     for key, item in enumerate(keyUnits):
         x_coor = unitSpacing2MM(item["x_unit"])
         y_coor = unitSpacing2MM(item["y_unit"])

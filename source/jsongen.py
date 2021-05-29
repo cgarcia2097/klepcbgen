@@ -1,8 +1,10 @@
-""" Keyboard netlist generator using KLE JSON files. Uses the closest square matrix for a given number of keys """
+""" Keyboard netlist generator using KLE JSON files. """
 
 import sys
 import argparse
 import json
+import os
+
 from klepcbgenmod import *
 
 ######################################################################
@@ -16,7 +18,7 @@ args = []
 
 ######################################################################
 ######################################################################
-# Classes
+# Functions
 ######################################################################
 ######################################################################
 
@@ -28,14 +30,7 @@ def kle2KeyClassJSON(klepcbgen):
         tmpString = json.dumps(item.__dict__)
         layout.append(tmpString)
 
-    with open(args.output_name + ".kle_json", "w+") as fp:
-        json.dump(layout, fp)
-
-######################################################################
-######################################################################
-# Functions
-######################################################################
-######################################################################
+    return json.dumps(layout)
 
 def parseCmdArgs():
     """ Parses the incoming command-line arguments """
@@ -77,7 +72,12 @@ def main(argv):
     # Parse JSON through KLEPCBGen
     kleproj = KLEPCBGenerator()
     kleproj.read_kle_json(args)
-    kle2KeyClassJSON(kleproj)
+    layoutJSON = kle2KeyClassJSON(kleproj)
+
+    filename = args.output_name + ".kle_json"
+    
+    with open( str(filename), "w+") as fp:
+        fp.write(layoutJSON)
 
     return 0
 
