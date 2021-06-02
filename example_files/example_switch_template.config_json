@@ -1,6 +1,6 @@
 {
     "switch_schema":{
-        "type":"mx",
+        "type":"mxhotswap",
         "pcbStabSupport":"False",
         "ledSupport":"False",
         "diodeMount":"tht"
