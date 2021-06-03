@@ -1,9 +1,9 @@
 {
     "switch_schema":{
-        "type":"mxhotswap",
+        "type":"alps",
         "pcbStabSupport":"False",
         "ledSupport":"False",
-        "diodeMount":"tht"
+        "diodeMount":"smd"
     },
     "led_schema":{
         "type":"led_single"

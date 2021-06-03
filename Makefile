@@ -5,11 +5,9 @@ EXAMPLE_DIR=example_files
 
 test:
 	make build
+	make build_example_json
 	make build_example_netlist
-
-	make build_example_pcb
 	
-
 build:
 	mkdir $(TARGET_DIR)
 
